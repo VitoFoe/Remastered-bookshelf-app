@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Remastered Bookshelf App</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+	<header class="head_bar">
+		<h1 class="head_bar__title">Remastered Bookshelf App</h1>
+		<h3 class="head_bar__small">Add, edit, and manage your books, but remastered!</h3>
+	</header>
+	<main>
+		<section class="input_section">
+			<h2>Insert New Book</h2>
+			<form id="inputBook">
+				<div class="input">
+					<label for="inputBookTitle">Title</label>
+					<input id="inputBookTitle" type="text" placeholder="Insert title" required>
+				</div>
+				<div class="input">
+					<label for="inputBookAuthor">Author</label>
+					<input id="inputBookAuthor" type="text" placeholder="Insert author" required>
+				</div>
+				<div class="input">
+					<label for="inputBookYear">Publishing Year</label>
+					<input id="inputBookYear" type="number" placeholder="Insert publishing year" required>
+				</div>
+				<div class="input_inline">
+					<label for="inputBookIsComplete">Finished Reading</label>
+					<input id="inputBookIsComplete" type="checkbox">
+				</div>
+				<button id="bookSubmit" type="submit">Add book to shelf <span>(You can edit this later) </span></button>
+			</form>
+		</section>
+
+		<section class="search_section">
+			<h2>Find Book*</h2>
+			<form id="searchBook">
+				<label for="searchBookTitle">Title</label>
+				<input id="searchBookTitle" type="text" placeholder="Insert title">
+				<button id="searchSubmit" type="submit">Find</button>
+			</form>
+		</section>
+
+		<section class="book_shelf">
+			<h2>Not Finished Reading</h2>
+
+			<div id="incompleteBookshelfList" class="book_list">
+				<!--      <article class="book_item">-->
+				<!--        <h3>Book Title</h3>-->
+				<!--        <p>Penulis: John Doe</p>-->
+				<!--        <p>Tahun: 2002</p>-->
+				<!--    -->
+				<!--        <div class="action">-->
+				<!--          <button class="green">Selesai dibaca</button>-->
+				<!--          <button class="red">Hapus buku</button>-->
+				<!--        </div>-->
+				<!--      </article>-->
+			</div>
+		</section>
+
+		<section class="book_shelf">
+			<h2>Finished Reading</h2>
+
+			<div id="completeBookshelfList" class="book_list">
+				<article class="book_item">
+					<h3>Book Title</h3>
+					<p>Author: John Doe</p>
+					<p>Publishing Year: 2002</p>
+
+					<div class="action">
+						<button class="green">Not Finished Reading</button>
+						<button class="red">Delete Book</button>
+					</div>
+				</article>
+			</div>
+		</section>
+	</main>
+	<header class="foot_bar">
+		<h1 class="foot_bar__desc">Created by: Sir Anas</h1>
+		<h1 class="foot_bar__desc">Remastered by: Vito Foe</h1>
+		<h3 class="foot_bar__small">*Unfinished</h3>
+	</header>
+
+	<script src="main.js"></script>
+
+</body>
+
+</html>
